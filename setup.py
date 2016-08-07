@@ -2,7 +2,7 @@ from distutils.core import setup
 setup(
         name = 'nso-penn',
         packages = ['nso-penn'],
-        version = '0.1',
+        version = '0.2',
         description = 'Code base to scrape an ical that describes events, times, locations and more regarding NSO events.',
         author = 'Adam Domingoes',
         author_email = 'pjladd22@gmail.com',

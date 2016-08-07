@@ -13,13 +13,13 @@ Setup
 * Install requirments using 'pip install -r requirements.txt'
 * Run the NSO API server using 'python runserver.py'
 
-## Dates
+## Usage
 
 <span name="dates"></span>
 ### View All Dates
 <table>
 <tr>
-<tr>URL</td>
+<td>URL</td>
 <td><code>http://api.pennlabs.org/nso</code></td>
 </tr>
 <tr>

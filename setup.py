@@ -1,7 +1,7 @@
 from distutils.core import setup
 setup(
-        name = 'nsopenn',
-        packages = ['nsopenn'],
+        name = 'pennnso',
+        packages = ['pennnso'],
         version = '0.1',
         description = 'Code base to scrape an ical that describes events, times, locations and more regarding NSO events.',
         author = 'Adam Domingoes',

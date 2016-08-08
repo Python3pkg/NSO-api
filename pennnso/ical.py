@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+
+FILE = """
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:-//Date iCal//NONSGML kigkonsult.se iCalcreator 2.20.2//
@@ -2497,4 +2500,7 @@ SUMMARY:NSO Hospitality Booths
 URL;TYPE=URI:https://www.nso.upenn.edu/event/2016-08-24-130000-2016-08-24-2
  03000/nso-hospitality-booths
 END:VEVENT
-END:VCALENDAR
+END:VCALENDAR"""
+
+def get_ical():
+    return FILE

@@ -1,5 +1,6 @@
 from datetime import datetime
 from operator import itemgetter
+from ical import get_ical
 
 def get_substring(i,data,s1,s2):
     return data[i][alt_index(data[i],s1):alt_index(data[i],s2)]
@@ -33,10 +34,8 @@ def to_date(s):
     s = datetime.strptime(s,"%b%d%Y%I:%M%p")
     return s
 
-def read_ical(file):
-    data = ""
-    with open(file, 'r') as myfile:
-        data = myfile.read().decode('utf8')
+def read_ical():
+    data = get_ical()
     data = data.split("DESCRIPTION:")
     data.pop(0)
     event_list = []
@@ -60,16 +59,16 @@ def read_ical(file):
         event_list.append(event)
     return sorted(event_list, key=itemgetter('date'))
 
-def get_event_dates(file):
-    sorted_list = read_ical(file)
+def get_event_dates():
+    sorted_list = read_ical()
     dates = []
     for x in sorted_list:
         if not (x['date'] in dates):
             dates.append(x['date'])
     return dates
 
-def get_events_by_date(file, date):
-    sorted_list = read_ical(file)
+def get_events_by_date(date):
+    sorted_list = read_ical()
     filtered = []
     for x in sorted_list:
         if x['date'] == date:

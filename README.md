@@ -1,4 +1,4 @@
-# Penn New Student Orientation Python SDK
+# Penn New Student Orientation Python SDK [Depreciated as of August 2016]
 
 A quick ical parser to be used for NSO 2016 in place of an RSS Feed to list event times, locations, descriptions, etc.
 

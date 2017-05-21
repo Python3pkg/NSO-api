@@ -1,6 +1,6 @@
 from datetime import datetime
 from operator import itemgetter
-from ical import get_ical
+from .ical import get_ical
 
 def get_substring(i,data,s1,s2):
     return data[i][alt_index(data[i],s1):alt_index(data[i],s2)]
@@ -19,7 +19,7 @@ def clean(d):
     if ":" in d:
         d = d[d.index(":") + 1:len(d)]
         d = d.replace("\\n","")
-        d = " ".join(filter(lambda a: a != "", d.split(" ")))
+        d = " ".join([a for a in d.split(" ") if a != ""])
     elif "\\n" in d:
         d = d[0:d.index("\\n")]
     d = d.replace(' for more information.',"")
